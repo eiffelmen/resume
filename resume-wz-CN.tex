@@ -1,0 +1,122 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+% \usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+\name{王镇}
+
+% {E-mail}{mobilephone}{homepage}
+% be careful of _ in emaill address
+\contactInfo{(+86) 130-5102-5376}{eiffelwatchmen@gmail.com}{图像算法工程师}{}
+% keep the last empty braces!
+%\contactInfo{xxx@yuanbin.me}{(+86) 131-221-87xxx}{}
+ 
+\section{个人总结}
+本人乐观向上、工作负责、自我驱动力强、善于思考、热爱尝试新事物、有突出地动手能力，擅长于Web开发领域和人工智能领域，认同人工智能在未来的不可替代性。在校期间长期从事目标检测相关研究，熟练掌握人工神经网络模型训练，服务端和移动端模型封装部署等工作。掌握AI在安防领域的可实施应用方案，对深度学习和人工智能有着非常浓厚的兴趣。
+
+% \section{\faGraduationCap\ 教育背景}
+% \section{教育背景}
+% \datedsubsection{\textbf{北京林业大学},软件工程,\textit{工学硕士}}{2017.9 - 2020.6}
+% \ \textbf{排名11/133(前10\%)},研究生篮球比赛第二名，研究生风采大赛第三名
+% \datedsubsection{\textbf{南阳理工学院},计算机科学与技术,\textit{工学学士}}{2013.9 - 2017.6}
+% \ \textbf{排名2/62(前5\%)},国家励志奖学金,计算机学院卓越班班长,优秀毕业生,优秀团员/优秀学生干部(5次)
+\section{教育背景}
+\datedsubsection{\textbf{北京林业大学},软件工程,\textit{工学硕士}}{2017.9 - 2020.6}
+\datedsubsection{\textbf{南阳理工学院},计算机科学与技术,\textit{工学学士}}{2013.9 - 2017.6}
+
+% \section{\faCogs\ IT 技能}
+\section{技术能力}
+\begin{itemize}[parsep=0.2ex]
+  \item \textbf{编程语言}: Java, C++, C, Python, Shell
+  \item \textbf{研究方向}: 目标检测, 模型加速，移动端跨平台C++开发
+  \item \textbf{AI技术栈}: PyTorch, SSD, FasterRCNN, YOLO, SVM, CMake, NCNN, OpenCV, JNI, Git, Docker
+  \item \textbf{Web技术栈}: Spring Boot, SSM, Dubbo, zookeeper, MySQL, Redis, MQ, Maven, Nginx, Nexus
+\end{itemize}
+
+\section{工作经历}
+\datedsubsection{\textbf{北京威富安防-中科院半导体所联合实验室 }, 图像算法工程师/项目负责人}{2019.4-至今}
+\begin{itemize}
+  \item 负责人脸识别项目（人脸锁、考勤机、人证机、服务端模型）工作，沟通人脸识别项目需求，协调算法人员工作计划，任务分配和进度把控。
+  \item 负责人脸锁项目、考勤机项目、动态人脸识别项目等的算法封装和部署工作，基于交叉编译环境完成移动端模型部署，设计C/C++外部接口，Java外部接口（采用JNI方式）。
+  \item 负责深度学习模型转换，模型加速工作，如Pytorch模型转换为NCNN模型，BN放缩因子剪枝模型。
+  \item 独立负责人脸检测算法研发，跟进目标检测发展方向，研发轻量级、标准级和重量级人脸检测算法。
+\end{itemize}
+\datedsubsection{\textbf{北京威富安防-中科院半导体所联合实验室 }, Java开发工程师}{2017.8-2019.4}
+\begin{itemize}
+  \item 独立负责智慧感知平台的后端任务，数据库表和Redis结构的设计，分布式系统的开发。
+  \item 独立负责大数据平台的设计和开发，采用FLink框架和MQ队列将业务平台和算法平台解耦。
+\end{itemize}
+
+\section{项目作品}
+\datedsubsection{\textbf{轻量级人脸检测算法} }{2021.1-2021.3}
+\begin{itemize}
+  \item 分析NXP i.MXRT106平台环境（内存小，算力较弱），撰写人脸锁算法研发计划表和任务分配。
+  \item 独立训练轻量级人脸检测算法模型，落地模型参数为模型大小300kb，开发板运行速度680ms。
+\end{itemize}
+\datedsubsection{\textbf{珠港澳人工智能大赛-短袖短裤识别} }{2020.10-2020.12}
+\begin{itemize}
+  \item 分析训练集数据的特征，整理样本分布形态，场景分布等信息，设计识别模型的基本网络结构。
+  \item 分析训练和测试结果日志，尝试暴力罗列所有类别、one-hot编码、双分类层等方法训练模型。
+  \item 使用TensorRT框架提升短袖短裤识别算法的检测速度，在准确率和速度上都远超其他参赛选手。
+\end{itemize}
+\datedsubsection{\textbf{基于NXP开发板的红外人脸识别算法} }{2020.5-至今}
+\begin{itemize}
+  \item NXP i.MX7ULP平台人脸锁算法库架构设计，编写CmakeLists，内含人脸检测算法、活体检测算法、质量判定算法、关键点定位算法、人脸识别算法，单帧识别速度550ms。
+  \item 独立训练人脸检测算法模型，完成PyramidBox、YOLOv5等模型版本，开发板执行速度达到89ms。
+  \item 基于NCNN构封装7ULP平台人脸识别算法库，在交叉编译Docker镜像中构建armv7版本算法库。
+\end{itemize}
+\datedsubsection{\textbf{戴口罩人脸识别算法} }{2020.3-2020.6}
+\begin{itemize}
+  \item 采集戴口罩人脸图像数据，同时通过图像合成脚本生成模拟戴口罩的人脸数据。
+  \item 基于SSD训练戴口罩人脸检测模型，在测试集上人脸检测算法召回率87.7$\%$的准确率为96.2$\%$。
+  \item 基于ubuntu环境封装戴口罩人脸识别算法，戴口罩人脸识别的算法在零误识率的准确率为87.08$\%$。
+\end{itemize}
+\datedsubsection{\textbf{食品环境安全监管平台} }{2019.7-2020.4}
+\begin{itemize}
+  \item 采集网络摄像头数据，清洗并标记5000张训练集，1300张测试集。
+  \item 独立完成餐饮人员卫生帽佩戴检测模型的设计和训练，在1300张测试集上的精确率达到93$\%$。
+  \item 基于GPU服务器环境封装卫生帽佩戴检测模型，提出服务端模型快速部署的通用方案。
+  \item 独立完成食品环境安全监管平台系统开发，采用Spring Boot框架，Dubbo分布式框架，Vue框架及Node.js完成前后端分离的分布式平台。
+\end{itemize}
+\datedsubsection{\textbf{ChinaMM2019竞赛-低光照人脸检测} }{2019.6-2019.8}
+\begin{itemize}
+  \item 使用伽马、MSRCR完成图像增强，使低光照图片的人脸变得更亮，亮度增加后会带来更多噪声。
+  \item 使用PyramidBox算法、TencentYoutu-DSFD算法、SRN算法的多模型融合方法完成人脸检测任务。
+  \item 使用TensorRT框架加速人脸检测算法，可以提升1.5倍。
+\end{itemize}
+\datedsubsection{\textbf{大数据图像算法处理平台} }{2018.10-2019.2}
+\begin{itemize}
+  \item 主导大数据平台的搭建，需求分析，绘制大数据平台的思维导图、设计时序图和流程图。
+  \item 基于Flink框架开发大数据平台，独立完成数据分发业务和人脸相关算法的处理业务。
+\end{itemize}
+\datedsubsection{\textbf{智慧感知平台} }{2018.4-2018.12}
+\begin{itemize}
+  \item 需求分析，负责摄像机模块、摄像机代理模块、门禁模块、工作流模块的时序图设计。
+  \item 负责智慧小区核心业务模块（工作流模块，摄像机代理模块）的代码开发和接口测试。
+  \item 设计项目父子项目依赖关系，搭建Nexus Maven仓库管理器维护自定义Jar包的版本。
+\end{itemize}
+\datedsubsection{\textbf{算法服务平台} }{2017.9-2018.3}
+\begin{itemize}
+  \item 参与项目需求分析，撰写系统详细设计文档，参与数据库表和Redis结构的设计。
+  \item 搭建Dubbo+zookeeper分布式系统结构，负责权限模块、存储模块、算法模块的业务开发和接口测试。%（人脸检测、特征点定位、人脸识别、活体检测）
+\end{itemize}
+
+
+\section{竞赛获奖}
+\begin{itemize}[parsep=0.2ex]
+  \item 珠港澳人工智能算法大赛\textbf{第一名}( \textit{https://www.cvmart.net/race/9922/base} ),2020年12月  % 2020年10月-2020年12月
+  % \item 第二届高速低功耗视觉理解挑战赛\textbf{一等奖}( \textit{http://hislopvision.aitestunion.com}), 2020年10月 % 2020年7月-2020年10月
+  \item ChinaMM低光照人脸检测\textbf{第六名}( \textit{https://flyywh.github.io/ChinaMM2019FDLOL/} ),2019年8月
+  \item 软件著作权《基于目标检测的餐饮人员卫生监管系统》
+  \item 更多作品见 \textit{https://github.com/eiffelmen}
+\end{itemize}
+
+\end{document}
