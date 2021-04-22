@@ -1,6 +1,6 @@
 # 个人简历
 
-本项目为个人简历 Latex 源码存放，同时包含效果图呈现，简历入口为 resume-wz_CN.tex， 修改自项目 [resume](https://github.com/hijiangtao/resume/releases)，基于VsCode编辑。
+本项目为个人简历 Latex 源码存放，同时包含效果图呈现，简历入口为 resume-wz_CN.tex， 修改自项目 [resume](https://github.com/hijiangtao/resume/releases)。
 
 ## 项目说明
 
